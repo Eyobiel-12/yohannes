@@ -24,7 +24,7 @@ export default function Home() {
   const { ref: ctaRef, inView: ctaInView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <>
+    <div className="home-container">
       {/* Hero Section */}
       <section ref={heroRef} className="hero-section min-h-screen flex items-center pt-20 relative">
         <div className="absolute inset-0 bg-black/50"></div>
@@ -295,6 +295,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
