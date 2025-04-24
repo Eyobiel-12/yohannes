@@ -1,7 +1,7 @@
 "use client"
 
+import * as React from "react"
 import { Badge } from "@/components/ui/badge"
-
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -367,10 +367,10 @@ export default function QuoteRequestPage() {
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                  <SelectItem value="klein\">Klein (< 50m²)</SelectItem>
+                                  <SelectItem value="klein">Klein (&lt; 50m²)</SelectItem>
                                   <SelectItem value="middel">Middel (50-200m²)</SelectItem>
                                   <SelectItem value="groot">Groot (200-500m²)</SelectItem>
-                                  <SelectItem value="zeer-groot">Zeer groot (> 500m²)</SelectItem>
+                                  <SelectItem value="zeer-groot">Zeer groot (&gt; 500m²)</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -797,7 +797,7 @@ export default function QuoteRequestPage() {
                                   <div>
                                     <p className="text-sm text-gray-500">Voorkeursdatum</p>
                                     <p className="font-medium">
-                                      {format(form.getValues("preferredStartDate"), "PPP", { locale: nl })}
+                                      {form.getValues("preferredStartDate") ? format(form.getValues("preferredStartDate") as Date, "PPP", { locale: nl }) : "Niet opgegeven"}
                                     </p>
                                   </div>
                                 )}
