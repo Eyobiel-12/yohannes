@@ -11,6 +11,8 @@ import ParallaxEffect from "@/components/animations/parallax-effect"
 import TextReveal from "@/components/animations/text-reveal"
 import MagneticButton from "@/components/animations/magnetic-button"
 
+// This is a forced update to trigger a new deployment
+
 export default function Home() {
   // Animation refs
   const { ref: heroRef, inView: heroInView } = useInView({ triggerOnce: true })
