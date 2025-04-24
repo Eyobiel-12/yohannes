@@ -8,6 +8,7 @@ import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import ScrollReveal from "@/components/animations/scroll-reveal"
 import ParallaxEffect from "@/components/animations/parallax-effect"
+import FixedParallax from "@/components/animations/fixed-parallax"
 import TextReveal from "@/components/animations/text-reveal"
 import MagneticButton from "@/components/animations/magnetic-button"
 
@@ -73,11 +74,11 @@ export default function Home() {
 
       {/* Services Section */}
       <section ref={servicesRef} className="services-section py-20 relative overflow-hidden">
-        <ParallaxEffect className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></ParallaxEffect>
-        <ParallaxEffect
+        <FixedParallax className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+        <FixedParallax
           offset={30}
           className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
-        ></ParallaxEffect>
+        />
 
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -267,11 +268,11 @@ export default function Home() {
       {/* CTA Section */}
       <section ref={ctaRef} className="py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/texture-pattern.png')] opacity-5"></div>
-        <ParallaxEffect className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-white/5 blur-3xl"></ParallaxEffect>
-        <ParallaxEffect
+        <FixedParallax className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
+        <FixedParallax
           offset={30}
           className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"
-        ></ParallaxEffect>
+        />
 
         <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
